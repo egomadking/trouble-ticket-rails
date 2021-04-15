@@ -1,0 +1,6 @@
+<h1> Tickets </h1>
+<ul>
+    <% @tickets.each do |ticket| %>
+        <li><%= link_to ticket.title, ticket_path(ticket) %> - <%= link_to ticket.assigned.username, user_path(ticket.assigned) %> </li> 
+    <% end %>
+</ul>
